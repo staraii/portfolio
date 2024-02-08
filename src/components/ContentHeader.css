@@ -1,0 +1,107 @@
+.content-header {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-around; */
+	align-items: center;
+	gap: 0.5rem;
+	width: 100%;
+	margin-block: 1.5rem;
+}
+
+.h1-ViewTitle {
+	font-size: 3rem;
+	color: var(--primary);
+	/* align-self: center; */
+	opacity: 0.9;
+	position: relative;
+}
+
+.h3-ViewSubTitle {
+	--glowing-text: rgb(72, 99, 141);
+	--glowing-text-2: #fbfdd1;
+	--glowing-text-3: #b0e2ff;
+	--glowing-text-4: #b3fff4;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	/* align-self: center; */
+
+	color: var(--secondary);
+	opacity: 0.8;
+}
+
+@media only screen and (min-device-width: 960px) {
+	.content-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		height: 100%;
+	}
+
+	.h1-ViewTitle {
+		text-align: center;
+		font-size: 3rem;
+		margin-top: 7rem;
+		letter-spacing: 20px;
+		font-weight: 900;
+	}
+
+	.h3-ViewSubTitle {
+		font-size: 1.25rem;
+		text-align: center;
+		padding-left: 5rem;
+	}
+}
+
+/* --- Effekt och animation till undertitlar när darkmode är aktiverat */
+[data-theme="dark"] .home-main .h3-ViewSubTitle {
+	text-shadow: 0 0 5px var(--glowing-text-2), 0 0 10px var(--glowing-text-2),
+		0 0 15px var(--glowing-text-2), 0 0 20px var(--glowing-text),
+		0 0 80px var(--glowing-text), 0 0 100px var(--glowing-text),
+		0 0 130px var(--glowing-text), 0 0 150px var(--glowing-text);
+	animation: light 1.3s ease-in-out forwards;
+}
+[data-theme="dark"] .projects-main .h3-ViewSubTitle {
+	text-shadow: 0 0 5px var(--glowing-text-3), 0 0 10px var(--glowing-text-3),
+		0 0 15px var(--glowing-text-3), 0 0 20px var(--glowing-text),
+		0 0 80px var(--glowing-text), 0 0 100px var(--glowing-text),
+		0 0 130px var(--glowing-text), 0 0 140px var(--glowing-text);
+	animation: light 1.3s ease-in-out forwards;
+}
+[data-theme="dark"] .contact-main .h3-ViewSubTitle {
+	text-shadow: 0 0 5px var(--glowing-text-4), 0 0 10px var(--glowing-text-4),
+		0 0 15px var(--glowing-text-4), 0 0 20px var(--glowing-text),
+		0 0 80px var(--glowing-text), 0 0 100px var(--glowing-text),
+		0 0 130px var(--glowing-text), 0 0 140px var(--glowing-text);
+	animation: light 1.3s ease-in-out forwards;
+}
+
+@keyframes light {
+	0% {
+		opacity: 0.7;
+	}
+	20% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 0.7;
+	}
+	38% {
+		opacity: 0;
+	}
+	45% {
+		opacity: 0.7;
+	}
+	50% {
+		opacity: 0;
+	}
+	53% {
+		opacity: 0.7;
+	}
+	65% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.7;
+	}
+}

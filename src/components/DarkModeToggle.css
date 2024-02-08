@@ -1,0 +1,41 @@
+.darkmode-toggle {
+	padding-block: 0.2rem;
+}
+
+.darkmode-toggle-checkbox {
+	display: none;
+}
+
+.darkmode-toggle-label {
+	position: relative;
+	display: block;
+	background: #d9d9d9;
+	width: 2.2rem;
+	height: 1.2rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.3),
+		inset 0px -5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.darkmode-toggle-label::after {
+	content: "";
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	width: 50%;
+	height: 80%;
+	background: #f2f2f2;
+	border-radius: 1rem;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+}
+
+.darkmode-toggle-checkbox:checked ~ .darkmode-toggle-label::after {
+	left: 100%;
+	transform: translateX(-110%);
+	background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.darkmode-toggle-checkbox:checked ~ .darkmode-toggle-label {
+	background: #242424;
+}

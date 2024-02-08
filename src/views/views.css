@@ -1,0 +1,142 @@
+/* ------ Views ----- */
+/* Main */
+.view-main {
+	color: var(--text);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: visible;
+	overflow-x: clip;
+	height: 100%;
+}
+/* Huvudsektion för de olika sidorna/views */
+.view-content-section {
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+/* --- Home --- */
+.welcome-p {
+	text-align: justify;
+	width: 80%;
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: var(--padding);
+	border-radius: 2rem;
+	box-shadow: 3px 5px 10px 1px rgba(70, 70, 70, 0.3),
+		inset 3px 5px 20px 1px rgba(216, 216, 216, 0.3);
+	margin-top: 1rem;
+	margin-bottom: 15rem;
+}
+
+/* --- Projects --- */
+
+.projects-section {
+	height: 100%;
+}
+
+
+/* --- Contact --- */
+.contact-form {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 2rem;
+	box-shadow: 3px 5px 10px 1px rgba(70, 70, 70, 0.3),
+		inset 3px 5px 20px 1px rgba(216, 216, 216, 0.3);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 15rem;
+}
+.input-container {
+	position: relative;
+	width: 15rem;
+}
+.form-input {
+	width: 15rem;
+	padding: 0.75rem;
+	border: 0;
+	border-radius: 0.3rem;
+	background-color: rgba(255, 255, 255, 0.2);
+	font-size: 0.75rem;
+	position: relative;
+}
+textarea {
+	min-height: 10rem;
+	resize: none;
+}
+.form-input:valid {
+	background-color: var(--form-autofill);
+}
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus .form-input:autofill {
+	-webkit-box-shadow: 0 0 0px 40rem var(--form-autofill) inset;
+}
+.form-input:focus {
+	outline: 0;
+}
+.form-input:focus ~ .form-label,
+.form-input:valid ~ .form-label {
+	font-size: 0.5rem;
+	top: -5px;
+}
+
+.form-label {
+	color: var(--form-label);
+	font-size: 0.75rem;
+	padding-inline: var(--padding);
+	padding-block: 0.25rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 0;
+	transition: all 0.25s ease;
+}
+.form-submit {
+	width: 15rem;
+	padding: 0.75rem;
+	font-size: 0.75rem;
+	border: 0;
+	border-radius: 0.3rem;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: var(--form-label);
+	transition: all 0.25s ease-in-out;
+}
+.form-submit:hover {
+	color: rgba(0, 0, 0, 0.8);
+	background-color: var(--form-label);
+}
+
+@media only screen and (min-device-width: 960px) {
+	.view-main {
+		flex-direction: row;
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+	}
+
+	.view-content-section {
+		height: 100%;
+		width: 50%;
+	}
+
+	.welcome-p {
+		margin-block: auto;
+	}
+
+	.contact-form {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 1rem;
+		margin-top: 4rem;
+		margin-bottom: 10rem;
+	}
+}
